@@ -1,0 +1,298 @@
+<!-- ABOUT HTML
+**HTML basically decides the layout of a website on  browser
+HTML has specific tags that builds these  layouts 
+-----------------------------------------------------------------------
+***webpages parses through all the tags and places the contents in its appropriate places
+--------------------------------------------------------------------------
+*** the order in which we mention the tags the website renders the webpage in the same order 
+
+
+-->
+
+<!--ABOUT DOCTYPE
+!DOCTYPE tells the browset the type of the file this is  
+-->
+<!DOCTYPE html>
+
+<!-- ABOUT HTML TAG
+    html element represent the root of the html document . this also has the highest 
+these tags also acts as a container for the other tags inside them  
+-->
+<html>
+
+<!--ABOUT HEAD TAG
+head tag of a html page contains data about the document such as the title , description,
+links of other type of files . thus overally it contains metadata of the document 
+-->
+
+    <head>
+        
+        <!-- "metatag" ->it gives web browser information on character set or metadata for webpage  -->
+        <meta charset="UTF-8">
+
+        <!-- this meta description tag can be used by google/ search engine to display info about this page on its search results -->
+        <!-- should be brief  160 characters should be enuogh -->
+        <meta name="description" content="this website is made for learning purpose">
+
+        <meta name="author" content="Batman">
+        <meta name="keywords" content="html,tutorial">
+
+        <!-- this metatag responds to the display size of the device and show accordingly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- content inside "title" TAG is shown on the webpage tab title -->
+        <title>sample website</title>
+
+    </head>
+
+
+<!-- ABOUT BODY TAG
+body tag contains all the html content for the webpage
+-->
+
+    <body>
+
+        <!-- Heading tag (1 2 3 4 5 6) decreasing order of size in display-->
+        <h1>Learn Website making</h1>
+
+        <!-- BREAK TAG useful in getting space or breaking a running line in two separate lines  -->
+        <br/>
+
+
+
+        <!-- PARAGRAPH TAG - useful  in writing block of contents -->
+        <p>
+            <!--
+            b tag is for bold 
+            i tag is for italic 
+            we can embedd tags one inside another
+            -->
+            This <i>is</i> <b>paragraph</b> 1.
+        </p>
+
+        <!-- HORIZONTAL RULE TAG creates a horizontal separation in between 
+        it doesnt need two tags while using-->
+        <hr/>
+
+
+
+        <p>
+            <!--BIG , SMALL TAG is useful in incresing the size of a segment of sentence-->
+            This <small>is</small> paragraph <big>number</big> 2.
+
+            <br/>
+
+            <!-- SUBSCRIPT AND SUPERSCRIPT TAG -->
+            we can write 100 as 10<sup>2</sup>
+        </p>
+
+
+
+        <!-- introduction of styling html -->
+        <p>
+            <p style="color:red; background-color:aqua;">
+                This paragraph is meant to be under experiment. Now it may change all the appearence of the approach.
+            </p>
+        </p>
+
+        <!-- LINKS TAG -->
+        <p>
+            <!-- target attribute opens the links in a new tab  -->
+            <a href="https://google.com" target="_blank">Google</a> Home Page
+            
+            <br/>
+
+            <!-- insted of directly giving the address link we can relative adderss between two pages -->
+            <a href="index2.html">index2 page</a>
+        </p>
+
+        <!-- IMAGES AND RESIZING OF IMAGES -->
+        <p>
+            <!-- alt attribute will showup when the image will not appear due to some reason -->
+            <img src="messi.jpg" alt="messi"/>
+            <!-- mention the source link of the image inside the source attribute whike using image from online  -->
+
+            <br/>
+            <!-- if insted of changing the both height and width of the image we will change only one of them , HTML will automatically adjust the other one according to the aspect ratio -->
+            <img width="150" height="100" src="messi.jpg" alt="messi"/>
+            
+            <br/>
+            <p>image with a link </p>
+            <a href="https://google.com"><img width="150" height="100" src="messi.jpg" alt="messi"/></a>
+            
+        </p>
+
+        <!-- ATTATCHING VIDEO WITH THE WEBSITE -->
+        <div>
+            <p>
+                <p> for locally saved video in the directory</p>
+                
+                <!-- ABOUT VIDEO TAG   
+                    src -> source of the video
+                    poster ->it's the thumbnail of the video 
+                    autoplay ->mentioning this attribute will automatically plays after website loading
+                    controls ->will diaplay controls on the top of the video
+                 -->
+                <video poster="messi.jpg" autolay controls width="500">
+                    <source src="peaky.mp4" type="video/mp4"> 
+                    sample video
+                </video>
+            
+                 <!-- *** IMPORTANT ***
+                     The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
+                 -->
+            </p>
+
+            <!-- TO EMBEDD VIDEOS FROM YOUTUBE -->
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+        </div>
+
+        <!-- LISTS in HTML -->
+        <div>
+            
+            <!-- 1> UNORDERED LIST -->
+            <ul>
+                <li><a>apple</a></li>
+                <li>oranges</li>
+                <li>table</li>
+            </ul>
+
+            <!-- 2> ORDERED LIST 
+                type chooses what type of ordering you are assigning to the lists
+                default is 1 2 3..
+                "a" -> smaller alphabets
+                "I" and "i-> upper and lower case roman numerals
+            -->
+            <ol type="i">
+                <li>hustle</li>
+                <li>pain</li>
+                <li>
+                    win
+                    <ol>
+                        <li>one</li>
+                        <li>two</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <!-- 3> DESCRIPTION LIST -->
+            <dl>
+                <!-- DESCRIPTION TERM -->
+                <dt>HTML</dt>
+
+                <!-- DESCRIBE THE DISCRIPTION TERM -->
+                <dd>they are rare</dd>
+            </dl>
+        </div>
+
+
+        <!-- TABLES IN HTML -->
+        <div>
+
+            <table>
+
+                <!-- TABLE HEAD -->
+                <thead>
+                    <!-- CAPTION OR THE TITLE OF THE TABLE stays at the center -->
+                    <caption>list of numbers</caption>
+
+                    <!-- TABLE HORIZONTAL ROW   -->
+                    <tr>
+                        <!-- TABLE HEADER -->
+                        <th>num1</th>
+                        <th>num2</th>
+                        <th>num2</th>
+                    </tr>
+                </thead>
+
+                <!-- TABLE BODY -->
+                <tbody>
+                    <tr>  
+                        <!-- TABLE DATA -->
+                        <td>1one</td>
+                        <td>1two</td>
+                        <td>1three</td>    
+                    </tr>
+    
+                    <tr>  
+                        <!-- COLSPAN-2 WILL TAKE 2 COLUMNS OF THE TABLE AND REST OF THE COLUMNS IN THE SAME ROW-->
+                        <td colspan="2">2one</td>
+                        <td>2two</td>
+                        <td>2three</td>    
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+
+        <!-- CONTAINER TAGS 
+            2 ways of displaying items BLOCK and INLINE
+            block elements take the entire width of the container and inline elements sit next to each other
+            inline example --------- <a> , <span>
+            block example -----------<p> ,  <div>
+        -->
+        <p>
+            <span>span1</span>
+            <span>span2</span>
+
+            <hr/>
+
+            <div>div1</div>
+            <div>div2</div>
+        </p>
+
+        <!-- INPUTs AND FORMS   -->
+        <p>
+            <!-- display single line input for text -->
+            <input type="text" />
+            <input type="password" placeholder="Enter your password" >
+
+            <!-- text area  with alloed number of columns and rows-->
+            <textarea name="sample_textarea" cols="30" rows="10"></textarea>
+
+            <!-- DATA input data -->
+            <input type="date">
+            <input type="range">
+            <input type="file">
+
+            <hr>
+
+            <!-- BUTTONS 
+                **checkboxes -> we can select multiple options
+                **radiobutton -> as long as they have same name we can select only one of them
+            -->
+            <form>
+                <input type="radio" name="btn">
+                <input type="radio" name="btn">
+
+                <input type="submit" name="btn1">
+            </form>
+                
+        </p>
+
+        <!-- iFRAMES
+            this are html  elements that diaplays another website inside current website 
+            "Sorry" will only visible if the browser cant support the embedded website 
+            
+            websites dont allow another websites to display as iframe to prevent mallicious activity
+        -->
+        <iframe src="https://google.com" frameborder="0">Sorry</iframe>
+
+    </body>
+
+</html>
+
+
+
+<!--
+
+********** RELATIONSHIP BETWEEN TAGS ****************
+1> head and body are siblings and both are child tags of html tag . html is the parent tag
+2> 
+
+*********** ATTRIBUTES / PROPERTIES ****************
+inside tags we provide some custom information in form of attributes 
+
+-->
